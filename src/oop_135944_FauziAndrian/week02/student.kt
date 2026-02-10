@@ -1,4 +1,4 @@
-package oop_135944_FauziAndrian.week02
+package oop_135944_FauziAndrian.week02.oop_135944_FauziAndrian.week02
 
 class Student(val name: String, val nim: String, var major: String) {
     init {
