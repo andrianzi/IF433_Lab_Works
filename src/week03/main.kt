@@ -15,12 +15,19 @@ fun main() {
 
 fun main() {
 
-    val weapon = Weapon("Excalibur")
+    val weapon = Weapon("Granat")
 
-    weapon.damage = -50      // gagal
-    weapon.damage = 9999     // jadi 1000
+    weapon.damage = -50
+    weapon.damage = 9999
 
     println("Nama: ${weapon.name}")
     println("Damage: ${weapon.damage}")
     println("Tier: ${weapon.tier}")
+
+    val player = Player("Fauzi")
+
+
+
+    player.addXp(50)
+    player.addXp(60)
 }
