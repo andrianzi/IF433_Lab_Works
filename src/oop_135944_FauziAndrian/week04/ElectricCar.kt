@@ -10,4 +10,8 @@ open class ElectricCar(val brand: String, val batteryCapacity: Int) {
     open fun honk() {
         println("$brand berbunyi: Tiiinnn!")
     }
+
+    fun openTrunk() {
+        println("Bagasi $brand terbuka")
+    }
 }
