@@ -29,14 +29,30 @@ fun Main {
 
 fun main() {
 
-    val mathHelper = MathHelper()
+    val wallet = EWallet("Fauzi", 100000.0)
+    val creditCard = CreditCard("Fauzi", 2000000.0)
 
-    val luasPersegi = mathHelper.hitungLuas(4)
-    val luasPersegiPanjang = mathHelper.hitungLuas(6, 3)
-    val luasLingkaran = mathHelper.hitungLuas(7.0)
+    val methods: List<PaymentMethod> = listOf(wallet, creditCard)
 
-    println("Luas Persegi: $luasPersegi")
-    println("Luas Persegi Panjang: $luasPersegiPanjang")
-    println("Luas Lingkaran: $luasLingkaran")
+    for (method in methods) {
 
+        when(method) {
+            is EWallet -> println("Pembayaran menggunakan E-Wallet")
+            is CreditCard -> println("Pembayaran menggunakan Credit Card")
+        }
+
+        // pembayaran pertama
+        method.processPayment(150000.0)
+
+        // SMART CASTING
+        if (method is EWallet) {
+            println("Top up otomatis 50000")
+            method.topUp(50000.0)
+
+            println("Mencoba pembayaran lagi...")
+            method.processPayment(75000.0)
+        }
+
+        println("-------------------")
+    }
 }
