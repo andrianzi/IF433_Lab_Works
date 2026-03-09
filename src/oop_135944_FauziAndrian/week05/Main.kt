@@ -41,10 +41,8 @@ fun main() {
             is CreditCard -> println("Pembayaran menggunakan Credit Card")
         }
 
-        // pembayaran pertama
         method.processPayment(150000.0)
 
-        // SMART CASTING
         if (method is EWallet) {
             println("Top up otomatis 50000")
             method.topUp(50000.0)
