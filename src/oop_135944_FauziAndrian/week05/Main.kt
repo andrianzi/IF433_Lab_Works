@@ -1,5 +1,5 @@
 package oop_135944_FauziAndrian.week02.oop_135944_FauziAndrian.week05
-
+/*
 fun Main {
     val dosen1 = Dosen(nama = "Pak Alex", nidn = "0123456")
     val admin1 = Admin(nama = "Bu Siti")
@@ -22,4 +22,21 @@ fun Main {
         }
         println("-----------------------")
     }
+}
+
+ */
+
+
+fun main() {
+
+    val mathHelper = MathHelper()
+
+    val luasPersegi = mathHelper.hitungLuas(4)
+    val luasPersegiPanjang = mathHelper.hitungLuas(6, 3)
+    val luasLingkaran = mathHelper.hitungLuas(7.0)
+
+    println("Luas Persegi: $luasPersegi")
+    println("Luas Persegi Panjang: $luasPersegiPanjang")
+    println("Luas Lingkaran: $luasLingkaran")
+
 }

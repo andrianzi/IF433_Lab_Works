@@ -1,7 +1,5 @@
 package oop_135944_FauziAndrian.week02.oop_135944_FauziAndrian.week05
 
-package oop_135944_FauziAndrian.week05
-
 class MathHelper {
 
     fun hitungLuas(sisi: Int): Int {
