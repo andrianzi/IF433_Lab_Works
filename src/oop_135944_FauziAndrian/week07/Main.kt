@@ -25,10 +25,15 @@ fun main() {
     println("Hasil Copy: $data3")
 
     val (username, age) = data1
-    println("Destructured: $username berumur $userAge")
+    println("Destructured: $username berumur $age")
+
+    val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik!")
 
     val uiMessage = when(response) {
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
+        is ApiResponse.Loading -> "Loading..."
     }
+
+    println(uiMessage)
 }
