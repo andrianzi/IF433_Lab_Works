@@ -1,5 +1,6 @@
 package oop_135944_FauziAndrian.week07
 
+/*
 fun main() {
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
@@ -36,4 +37,11 @@ fun main() {
     }
 
     println(uiMessage)
+}
+
+ */
+
+fun main() {
+    GameManager.startGame()
+    GameManager.startGame()
 }
