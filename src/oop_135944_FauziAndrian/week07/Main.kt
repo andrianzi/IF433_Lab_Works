@@ -58,4 +58,17 @@ fun main() {
     println("Durability: ${starter.durability}")
     println(epic.item)
     println("Durability: ${epic.durability}")
+
+    val event: BattleState = BattleState.LootDropped(
+        GameItem("Pedang Naga", 100, ItemRarity.EPIC)
+    )
+
+    val message = when(event) {
+        is BattleState.MonsterEncounter -> "Musuh muncul: ${event.monsterName}"
+        is BattleState.LootDropped -> "Dapat item: ${event.item.name}"
+        is BattleState.GameOver -> "Game Over: ${event.reason}"
+        is BattleState.SafeZone -> "Berada di zona aman"
+    }
+
+    println(message)
 }
