@@ -9,7 +9,6 @@ fun processEvent(event: BattleState) {
         }
 
         is BattleState.LootDropped -> {
-            // destructuring
             val (name, damage, rarity) = event.item
             println("🎁 Loot didapat: $name (Damage: $damage, Rarity: $rarity)")
         }
