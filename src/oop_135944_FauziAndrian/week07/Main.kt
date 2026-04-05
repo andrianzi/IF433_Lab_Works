@@ -51,4 +51,11 @@ fun main() {
 
     val item = GameItem("poison", 100, ItemRarity.LEGENDARY)
     println(item)
+
+    val starter = Weapon.forgeStarterSword()
+    val epic = Weapon.forgeEpicSword()
+    println(starter.item)
+    println("Durability: ${starter.durability}")
+    println(epic.item)
+    println("Durability: ${epic.durability}")
 }
