@@ -69,6 +69,9 @@ fun main() {
         is BattleState.GameOver -> "Game Over: ${event.reason}"
         is BattleState.SafeZone -> "Berada di zona aman"
     }
-
     println(message)
+
+    println("\n=== TEST GAME MANAGER (SINGLETON) ===")
+    GameManager.startGame()
+    GameManager.startGame()
 }
