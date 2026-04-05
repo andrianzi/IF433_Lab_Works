@@ -7,10 +7,10 @@ object GameManager {
 
     fun startGame() {
         if (isGameRunning) {
-            println("Game sudah berjalan! Mencegah instansiasi ganda.")
+            println("Game sudah berjalan!")
         } else {
             isGameRunning = true
-            println("Memulai Game Engine...")
+            println("Memulai Game...")
         }
     }
 }

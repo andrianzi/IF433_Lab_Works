@@ -44,4 +44,8 @@ fun main() {
 fun main() {
     GameManager.startGame()
     GameManager.startGame()
+
+    val rarity = ItemRarity.LEGENDARY
+    println("Rarity: $rarity")
+    println("Drop Chance: ${rarity.dropChance}%")
 }
