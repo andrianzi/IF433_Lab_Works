@@ -48,4 +48,7 @@ fun main() {
     val rarity = ItemRarity.LEGENDARY
     println("Rarity: $rarity")
     println("Drop Chance: ${rarity.dropChance}%")
+
+    val item = GameItem("poison", 100, ItemRarity.LEGENDARY)
+    println(item)
 }
