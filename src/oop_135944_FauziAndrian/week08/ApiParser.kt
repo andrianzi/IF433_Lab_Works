@@ -1,10 +1,10 @@
 package oop_135944_FauziAndrian.week02.oop_135944_FauziAndrian.week08
 
+
 class ApiParser {
     fun parseProduct(rawJson: Map<String, Any?>): Product? {
         val id = requireNotNull(rawJson["id"] as? String) { "API Invalid: Missing ID" }
         val name = requireNotNull(rawJson["name"] as? String) { "API Invalid: Missing Name" }
-
         val type = rawJson["type"] as? String
 
         return when (type) {
@@ -27,8 +27,13 @@ class ApiParser {
         }
 
         val transactionId = JavaPaymentService.processPayment(productId)!!
-
         println("Checkout berhasil untuk produk ID: $productId")
         println("Transaction ID dari Java Service: $transactionId")
+    }
+}
+
+object JavaPaymentService {
+    fun processPayment(productId: String): String {
+        return "TRX-$productId-SUCCESS"
     }
 }
