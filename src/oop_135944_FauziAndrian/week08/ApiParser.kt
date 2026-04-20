@@ -16,7 +16,19 @@ class ApiParser {
                 val size = rawJson["size"] as? String ?: "All Size"
                 Clothing(id, name, size)
             }
-            else -> null // Kembalikan null jika tipe tidak dikenal atau null
+            else -> null
         }
+    }
+
+    fun checkout(product: Product) {
+        val productId = when (product) {
+            is Electronic -> product.id
+            is Clothing -> product.id
+        }
+
+        val transactionId = JavaPaymentService.processPayment(productId)!!
+
+        println("Checkout berhasil untuk produk ID: $productId")
+        println("Transaction ID dari Java Service: $transactionId")
     }
 }
