@@ -1,5 +1,6 @@
 package oop_135944_FauziAndrian.week02.oop_135944_FauziAndrian.week08
 
+
 fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null, null)
@@ -66,4 +67,6 @@ fun main() {
     // Kita menekan tombol !! karena KITA TAHU implementasi Java-nya aman
     val statusLength = javaResponse!!.length
     println("Status dari Java: $javaResponse (Length: $statusLength)")
+
+    runMockUnitTest()
 }
